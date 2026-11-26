@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "SplameiPlay_File_SDK"
+version = "1.0.0.0"
+description = "SplameiPlay File SDK (Python)"
+readme = "README.md"
+requires-python = ">=3.8"
+
+license = "Apache-2.0"
+license-files = ["*LICENCE*", "NOTICE"]
+
+authors = [
+    { name = "Splamei", email = "social@veemo.uk" }
+]
+
+maintainers = [
+    { name = "Splamei", email = "social@veemo.uk" }
+]
+
+keywords = ["splameiplay"]
+
+dependencies = [
+    # "requests>=2.28.0",
+]
+
+[project.urls]
+Homepage = "https://veemo.uk"
+Documentation = "https://docs.veemo.uk"
+Repository = "https://veemo.uk"
+Issues = "https://veemo.uk"
