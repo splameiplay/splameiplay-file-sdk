@@ -1,0 +1,50 @@
+name: Contributors File
+run-name: ${{ github.workflow }} -triggered by- ${{ github.actor }} -via- ${{ github.event_name }} ${{ github.sha }} ${{ github.event.head_commit.message }}
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-contributors:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Create file
+        run: |
+          echo "# Contributors" > CONTRIBUTORS.md
+          echo "" >> CONTRIBUTORS.md
+          echo "This project wouldn't exist without the contributors behind it. Thank you! <3" >> CONTRIBUTORS.md
+          echo "" >> CONTRIBUTORS.md
+          echo "If you want to contribute to the project, please read CONTRIBUTING.md!" >> CONTRIBUTORS.md
+          echo "" >> CONTRIBUTORS.md
+          echo "---" >> CONTRIBUTORS.md
+          echo "" >> CONTRIBUTORS.md
+
+          git shortlog -sn HEAD | awk '{initials=""; for(i=2;i<=NF;i++) initials=initials $i " "; print "- " initials "("$1" commits)"}' >> CONTRIBUTORS.md
+
+      - name: Commit and Push
+        run: |
+          git config --local user.email "splamei.vt@gmail.com"
+          git config --local user.name "SplameiBot[bot]"
+
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SIGNING_KEY }}" > ~/.ssh/signing_key
+          chmod 600 ~/.ssh/signing_key
+
+          eval "$(ssh-agent -s)"
+          ssh-add ~/.ssh/signing_key
+
+          git config --local gpg.format ssh
+          git config --local user.signingkey ~/.ssh/signing_key
+          git config --local commit.gpgsign true
+
+          git add CONTRIBUTORS.md
+          if ! git diff --cached --quiet; then
+            git pull
+            git commit -m "Updated CONTRIBUTORS.md"
+            git push
+          fi
