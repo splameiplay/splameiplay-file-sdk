@@ -1,0 +1,17 @@
+name: Licence Check
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check-licence:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Check licences
+        uses: https://github.com/apache/skywalking-eyes/header@main

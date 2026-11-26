@@ -1,0 +1,25 @@
+header:
+  license:
+    spdx-id: Apache-2.0
+    copyright-owner: Splamei
+    copyright-year: '2026'
+    software-name: splameiplay-file-sdk
+
+  paths:
+    - '**'
+
+  paths-ignore:
+    - 'THIRD_PARTY_LICENCES'
+    - '**/*.md'
+    - 'LICENCE'
+    - 'NOTICE'
+    - '**/*.png'
+    - '**/*.ico'
+    - '**/*.json'
+    - '**/*.sln'
+    - '**/*.toml'
+    - "assets"
+    - ".github"
+    - ".forgejo"
+    - ".gitignore"
+    - ".licenserc.yaml"
