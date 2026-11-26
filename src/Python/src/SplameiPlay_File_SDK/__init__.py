@@ -12,6 +12,7 @@
  See the License for the specific language governing permissions and
  limitations under the License."""
 
-
 from .Main import is_pre_release, get_platform, marco, read_splameiplay_data, save_splameiplay_data
 from .Exceptions import CustomFileSyntaxException, CustomFileParseException, CustomFileReadException
+
+__version__ = "1.0.0.0"
