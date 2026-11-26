@@ -1,5 +1,5 @@
 <h1 align="center">
-	<span align="center">SplameiPlay File SDK
+	<span align="center">SplameiPlay File SDK (Python)
 </h1>
 <p align="center">
 	<img src="https://img.shields.io/github/check-runs/splameiplay/splameiplay-file-sdk/main">
@@ -8,7 +8,7 @@
 	<img src="https://img.shields.io/github/repo-size/splameiplay/splameiplay-file-sdk">
 </p>
 <p align="center">
-	The official SDK to easily read and write SplameiPlay files within your app
+	The official SDK for Python to easily read and write SplameiPlay files within your app
 </p>
 
 > [!IMPORTANT]
@@ -26,11 +26,11 @@ Any support to this project will go a long way! You could help support by:
 
 All contributions will be licenced under the Apache License 2.0 to keep the open-source nature of the app.
 
-Please read `CONTRIBUTING.md` for everything you need to know before contributing!
+Please read [CONTRIBUTING.md](https://github.com/splameiplay/splameiplay-file-sdk/blob/main/CONTRIBUTING.md) for everything you need to know before contributing!
 
 ## License
 
-All code written directly for this project is licenced under the Apache License 2.0 unless otherwise stated. You can read the full licence in the `LICENCE` file and information about third party licences in the `THIRD_PARTY_LICENCES` file.
+All code written directly for this project is licenced under the Apache License 2.0 unless otherwise stated. You can read the full licence in the `LICENCE` file and notice in the `NOTICE` file.
 
 ## Branding Rights
 
