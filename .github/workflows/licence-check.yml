@@ -1,4 +1,5 @@
 name: Licence Check
+run-name: ${{ github.workflow }} -triggered by- ${{ github.actor }} -via- ${{ github.event_name }} ${{ github.sha }} ${{ github.event.head_commit.message }}
 
 on:
   push:
