@@ -6,4 +6,5 @@ If you want to contribute to the project, please read CONTRIBUTING.md!
 
 ---
 
-- Splamei (7 commits)
+- Splamei (27 commits)
+- SplameiBot[bot] (1 commits)
