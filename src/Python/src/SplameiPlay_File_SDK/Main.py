@@ -53,10 +53,10 @@ class SplameiPlay_File_Data():
         self.data = data
 
 def read_splameiplay_data(splameiplayData: List[str]) -> SplameiPlay_File_Data:
-    """Reads the raw content of a SplameiPlay File from memory (an string list)
+    """Reads the raw content of a SplameiPlay File (provided by a string list)
 
     Args:
-        splameiplayData: The content of the file, where each entry in the array is a new line
+        splameiplayData: The content of the file, where each entry in the list is a new line
 
     Returns:
         The parsed content of the SplameiPlay file
