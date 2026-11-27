@@ -1,5 +1,5 @@
 name: Run tests
-run-name: ${{ github.workflow }} -triggered by- ${{ github.actor }} -via- ${{ github.event_name }} ${{ github.sha }} ${{ github.event.head_commit.message }}
+run-name: ${{ github.workflow }} -triggered by- ${{ github.actor }} -via- ${{ github.event_name }} ${{ github.sha }}
 
 on:
   push:
