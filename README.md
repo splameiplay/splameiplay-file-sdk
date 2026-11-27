@@ -14,6 +14,16 @@
 > [!IMPORTANT]
 > We're still working on this project so some parts of it, like the README or docs aren't complete so please bear with us!
 
+<details>
+<summary>Not on GitHub?</summary>
+
+Changes, issues and pull requests are only read and accepted when made on GitHub. Other locations, such as Codeberg are mirrors and are not checked.
+
+This is done to unify and make it easier to manage changes and issues that may pop up. If you need to make an issue or you want to help contribute to the creation of the SDK, please make them on the GitHub repository:
+
+https://github.com/splameiplay/splameiplay-file-sdk
+</details>
+
 ## Contributing
 
 Any support to this project will go a long way! You could help support by:
