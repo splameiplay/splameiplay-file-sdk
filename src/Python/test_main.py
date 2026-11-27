@@ -39,7 +39,7 @@ def test_splameiplay_read_failure():
         SplameiPlay_File_SDK.read_splameiplay_data(payload)
         pytest.fail("Accepted the new payload (file) despite the version being invalid!")
     except Exception:
-        print("Passed!")
+        print("Test one pass!")
 
     try:
         payload[0] = "Version=1.1"
@@ -48,7 +48,7 @@ def test_splameiplay_read_failure():
         SplameiPlay_File_SDK.read_splameiplay_data(payload)
         pytest.fail("Accepted the new payload (file) despite the type being invalid!")
     except Exception:
-        print("Passed!")
+        print("Test two pass!")
 
     try:
         payload[1] = "Type=Hello"
@@ -56,7 +56,7 @@ def test_splameiplay_read_failure():
         SplameiPlay_File_SDK.read_splameiplay_data(payload)
         pytest.fail("Accepted the new payload (file) despite the type version being invalid!")
     except Exception:
-        print("Passed!")
+        print("Test three pass!")
 
     try:
         payload[2] = "TypeVersion=1.1"
@@ -64,14 +64,14 @@ def test_splameiplay_read_failure():
         SplameiPlay_File_SDK.read_splameiplay_data(payload)
         pytest.fail("Accepted the new payload (file) despite the a key being invalid!")
     except Exception:
-        print("Passed!")
+        print("Test four pass!")
 
     try:
         payload[8] = "/Hello World"
         SplameiPlay_File_SDK.read_splameiplay_data(payload)
         pytest.fail("Accepted the new payload (file) despite the a section being invalid!")
     except Exception:
-        print("Passed!")
+        print("Test five pass!")
 
 def test_splameiplay_save():
     type = "Hello"
@@ -103,21 +103,21 @@ def test_splameiplay_save_failure():
         SplameiPlay_File_SDK.save_splameiplay_data(type, typeVersion, payload, allowEqualSignsInContentValues=False)
         pytest.fail("Accepted the new payload (file) despite being told to disallow equal signs!")
     except Exception:
-        print("Passed!")
+        print("Test one pass!")
 
     try:
-        payload["NewSection2"] = {"Key": "Hello World=Value"}
+        payload["NewSection2"] = {"Hello World": "Hello World"}
 
-        SplameiPlay_File_SDK.save_splameiplay_data(type, typeVersion, payload, allowEqualSignsInContentValues=False)
+        SplameiPlay_File_SDK.save_splameiplay_data(type, typeVersion, payload)
         pytest.fail("Accepted the new payload (file) despite having an invalid key!")
     except Exception:
-        print("Passed!")
+        print("Test two pass!")
 
     type = "Hello World"
     try:
         payload["NewSection2"] = {"Key": "Hello=World"}
 
-        SplameiPlay_File_SDK.save_splameiplay_data(type, typeVersion, payload, allowEqualSignsInContentValues=False)
+        SplameiPlay_File_SDK.save_splameiplay_data(type, typeVersion, payload)
         pytest.fail("Accepted the new payload (file) despite having an invalid type!")
     except Exception:
-        print("Passed!")
+        print("Test three pass!")
