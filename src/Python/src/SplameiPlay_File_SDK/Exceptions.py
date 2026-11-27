@@ -13,13 +13,16 @@
  limitations under the License."""
 
 class CustomFileSyntaxException(Exception):
+    """Raised when the file your trying to read/save is invalid (doesn't follow the syntax)"""
     def __init__(self, message):
         super().__init__(message)
 
 class CustomFileParseException(Exception):
+    """Raised when an error occurs when trying to read/save your file. This is often a generic catch-all error and doesn't always pin-point a expecific issue"""
     def __init__(self, message):
         super().__init__(message)
 
 class CustomFileReadException(Exception):
+    """Raised when an error occurs trying to read a file. Currently, unlike other versions of the SDK, this is only thrown when an error occured reading the header"""
     def __init__(self, message):
         super().__init__(message)
