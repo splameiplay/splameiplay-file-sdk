@@ -38,6 +38,10 @@ jobs:
         run: |
           cd ./src/Python/
           pip install pytest
+          pip install --upgrade build
+
+          python3 -m build --wheel
+          pip install dist/*.whl
 
       - name: Run tests
         run: |
