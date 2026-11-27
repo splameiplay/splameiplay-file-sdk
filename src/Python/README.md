@@ -28,6 +28,20 @@ All contributions will be licenced under the Apache License 2.0 to keep the open
 
 Please read [CONTRIBUTING.md](https://github.com/splameiplay/splameiplay-file-sdk/blob/main/CONTRIBUTING.md) for everything you need to know before contributing!
 
+## Building from source
+
+> [!IMPORTANT]
+> The SplameiPlay File SDK for Python is developed, tested and built with Python 3.13 so you may have issues with older/newer version of Python. If you have issues building the SDK, please try Python 3.13 before making an issue!
+
+Before you build, make sure your Python environment has the `build` package installed and up-to-date. You can install/update it using the `pip install --upgrade build` command.
+
+After the `build` package is installed, you can build the project using the `python3 -m build --wheel` command. This will place the compiled package wheel in the `dist` directory. It's name may vary but it'll end in `.whl`.
+
+Finally, to install the compiled wheel, simply just run the `pip install dist/<file_name>` command where `<file_name>` is the file name outputted by `build`.
+
+> [!TIP]
+> The package doesn't need anything else installed because the packages it uses are build directly into Python (3.13)
+
 ## License
 
 All code written directly for this project is licenced under the Apache License 2.0 unless otherwise stated. You can read the full licence in the `LICENCE` file and notice in the `NOTICE` file.
