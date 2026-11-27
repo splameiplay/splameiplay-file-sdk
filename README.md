@@ -24,6 +24,49 @@ This is done to unify and make it easier to manage changes and issues that may p
 https://github.com/splameiplay/splameiplay-file-sdk
 </details>
 
+---
+
+The SplameiPlay File SDK is the official Software Development Kit to make reading and creating SplameiPlay Files for your app as easy as possible. It doesn't take many lines of code to start using SplameiPlay files so you can easily drop it in to your project while still having control over the kind of files you create and read.
+
+The SDK currently only supports C# (Both .NET Framework and Core) and Python but we're looking into expanding the SDK out further to more languages and platforms!
+
+## Features
+
+- Easy to drop-in and use
+  - Drop in the SDK and quickly start creating and reading SplameiPlay files with minimal effort
+- Small footprint
+  - It only takes a few lines of code to start creating and reading SplameiPlay files despite it's small size!
+- Official support
+  - The SDK is officially supported by us so you'll get updates to the file syntax as soon as they're released
+- You're in control
+  - Create and read SplameiPlay files exactly how you need them. Your data, your type, your file.
+- Open-source at core
+  - The SDK is licenced under the Apache 2.0 licence so you can freely use the SDK how you need it, and help develop it for everyone else
+
+## Support
+
+### Supported SDK versions
+
+This is a list of all the languages and platforms currently supported, and the newest and oldest version of the SDK supported for each.
+
+> Due to the age of the SDK (still a baby!), there is no LTS release yet. We'll update this when the first LTS release is made
+
+|Language|Platform      |Oldest supported|Newest supported|LTS release|
+|--------|--------------|----------------|----------------|-----------|
+|C#      |.NET Framework|1.0.x.x         |1.0.x.x         |           |
+|        |.NET Core     |1.0.x.x         |1.0.x.x         |           |
+|Python  |Python        |1.0.x.x         |1.0.x.x         |           |
+
+### Supported platform version
+
+This is a list of all the versions of the language(s) and platform pairs that is supported by the SDK
+
+|Language|Platform      |Supported version|
+|--------|--------------|-----------------|
+|C#      |.NET Framework|4.7              |
+|        |.NET Core     |10.0             |
+|Python  |Python        |3.13             |
+
 ## Contributing
 
 Any support to this project will go a long way! You could help support by:
