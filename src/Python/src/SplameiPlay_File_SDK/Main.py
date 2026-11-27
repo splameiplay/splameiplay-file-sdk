@@ -44,7 +44,7 @@ def marco() -> str:
 
     return "Polo!"
 
-class SplameiplayFileData():
+class SplameiPlay_File_Data():
     def __init__(self, file_version, file_type, file_type_version, data):
         self.file_version = file_version
         self.file_type = file_type
@@ -52,7 +52,7 @@ class SplameiplayFileData():
 
         self.data = data
 
-def read_splameiplay_data(splameiplayData: List[str]) -> SplameiplayFileData:
+def read_splameiplay_data(splameiplayData: List[str]) -> SplameiPlay_File_Data:
     """Reads the raw content of a SplameiPlay File from memory (an string list)
 
     Args:
@@ -86,7 +86,7 @@ def read_splameiplay_data(splameiplayData: List[str]) -> SplameiplayFileData:
     else:
         raise CustomFileParseException(f"Unable to read the file. The file version '{fileVersion}' is not compatible with this version of the SDK")
 
-    result = SplameiplayFileData(file_version=fileVersion,
+    result = SplameiPlay_File_Data(file_version=fileVersion,
                                  file_type=fileType,
                                  file_type_version=fileTypeVersion,
                                  
