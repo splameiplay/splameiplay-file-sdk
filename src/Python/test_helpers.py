@@ -29,17 +29,17 @@ def test_invalid_header():
         lines = ["Version=1.1e", "Type=Hello", "TypeVersion=1.2"]
         Helper.getHeader(lines)
 
-        pytest.fail("The invalid header was accepted but doesn't follow the syntax!")
+        pytest.fail("The invalid header was accepted but doesn't follow the syntax! (Invalid Version=)")
     except ValueError:
-        print("Test one done!")
+        print("Test one pass!")
 
     try:
         lines = ["Version=1.1", "TypeVersion=1.2"]
         Helper.getHeader(lines)
 
-        pytest.fail("The invalid header was accepted but doesn't follow the syntax!")
+        pytest.fail("The invalid header was accepted but doesn't follow the syntax! (Missing Type=)")
     except IndexError:
-        print("Test two done!")
+        print("Test two pass!")
 
 def test_invalid_key_section_name():
     sectionName = "HelloWorld"
@@ -93,7 +93,7 @@ def test_file_ext_check():
 
         pytest.fail(f"'{filename}' was accepted but shouldn't be!")
     except SplameiPlay_File_SDK.CustomFileSyntaxException:
-        print("Valid!")
+        print("Test four pass!")
 
 def test_key_value_str_conversion():
     result = Helper.convertKeyValueToFile("Hello", "World")
