@@ -165,7 +165,7 @@ public static class SplameiplayFiles
         }
         else
         {
-            throw new CustomFileParseException($"Unable to read the file. The file version '{fileVersion}' is not compatible with this version of the SDK");
+            throw new CustomFileParseException($"Unable to read the file. The file version '{fileVersion}' is not supported by this version of the SDK");
         }
 
         result.fileVersion = fileVersion;

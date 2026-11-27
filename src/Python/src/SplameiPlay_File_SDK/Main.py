@@ -84,7 +84,7 @@ def read_splameiplay_data(splameiplayData: List[str]) -> SplameiPlay_File_Data:
     if fileVersion == 1.1:
         parsedData = Reader.readSyntax1_1(lines)
     else:
-        raise CustomFileParseException(f"Unable to read the file. The file version '{fileVersion}' is not compatible with this version of the SDK")
+        raise CustomFileParseException(f"Unable to read the file. The file version '{fileVersion}' is not supported by this version of the SDK")
 
     result = SplameiPlay_File_Data(file_version=fileVersion,
                                  file_type=fileType,
